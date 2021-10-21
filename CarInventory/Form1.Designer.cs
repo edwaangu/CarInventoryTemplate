@@ -85,7 +85,6 @@
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(300, 138);
             this.outputLabel.TabIndex = 5;
-            this.outputLabel.Text = "label1";
             // 
             // label1
             // 
@@ -140,6 +139,7 @@
             this.Controls.Add(this.yearInput);
             this.Name = "Form1";
             this.Text = "Car Inventory";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
