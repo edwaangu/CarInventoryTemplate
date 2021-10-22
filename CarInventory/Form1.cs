@@ -42,6 +42,30 @@ namespace CarInventory
             mileageInput.Text = "";
         }
 
+        private void listButton_Click(object sender, EventArgs e)
+        {
+            outputLabel.Text = "";
+            foreach (Car car in inventory)
+            {
+                outputLabel.Text += car.year + " " + car.make + " " + car.colour + " " + car.mileage + "\n";
+            }
+        }
+
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            int index = inventory.FindIndex(x => x.make == makeInput.Text);
+            if(index >= 0)
+            {
+                outputLabel.Text = $"Removed car of make {inventory[index].make}";
+                inventory.RemoveAt(index);
+            }
+            else
+            {
+                outputLabel.Text = $"Could not remove car of make {makeInput.Text}";
+            }
+            makeInput.Text = "";
+        }
+
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             XmlWriter writer = XmlWriter.Create("inventoryData.xml", null);
@@ -96,5 +120,6 @@ namespace CarInventory
 
             reader.Close();
         }
+
     }
 }

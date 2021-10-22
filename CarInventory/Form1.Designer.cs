@@ -38,6 +38,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.removeButton = new System.Windows.Forms.Button();
+            this.listButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // yearInput
@@ -122,11 +124,33 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Mileage";
             // 
+            // removeButton
+            // 
+            this.removeButton.Location = new System.Drawing.Point(167, 144);
+            this.removeButton.Name = "removeButton";
+            this.removeButton.Size = new System.Drawing.Size(64, 23);
+            this.removeButton.TabIndex = 10;
+            this.removeButton.Text = "Remove";
+            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
+            // 
+            // listButton
+            // 
+            this.listButton.Location = new System.Drawing.Point(27, 144);
+            this.listButton.Name = "listButton";
+            this.listButton.Size = new System.Drawing.Size(64, 23);
+            this.listButton.TabIndex = 11;
+            this.listButton.Text = "List";
+            this.listButton.UseVisualStyleBackColor = true;
+            this.listButton.Click += new System.EventHandler(this.listButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 366);
+            this.Controls.Add(this.listButton);
+            this.Controls.Add(this.removeButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -157,6 +181,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button removeButton;
+        private System.Windows.Forms.Button listButton;
     }
 }
 
